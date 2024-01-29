@@ -40,8 +40,7 @@ adata = scv.utils.merge(adata, ldata)
 # plot umap to check 
 sc.pl.umap(adata, color='celltype', frameon=False, legend_loc='on data', title='', save='_celltypes.pdf')
 
-fact=["EC","EndoC","Fibroblast","SMC","Cardiomyocyte","Macrophage","T-cell","Pericyte","Neuro"]
-fact=["C0","C1","C2","C3","C4","C5","C6"]
+# fact=["C0","C1","C2","C3","C4","C5","C6"]
 fact=["TA","TA carcinoma","Enterocytes carcinoma","Goblet","Plastical Enterocytes","Distal Enterocytes 1","Distal Enterocytes 2","Lig Enterocytes","seEPC","ASC cells"]
 a=adata.obs.celltype
 celltypeOder=a.cat.set_categories(fact)
